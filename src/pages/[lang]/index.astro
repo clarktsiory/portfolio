@@ -1,0 +1,99 @@
+---
+import { languages } from "../../i18n/ui";
+import { getLangFromUrl,useTranslations } from "../../i18n/utils";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  const routes = Object.entries(languages).map(([lang, _]) => ({
+    params: { lang },
+  }));
+
+  return [...routes];
+}
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<BaseLayout>
+  <div class="flex justify-end w-full">
+    <ul
+      id="language-select"
+      class="block space-y-2 px-4 py-3 text-base font-medium text-gray-700 bg-white appearance-none focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+    >
+      <li class="flex items-center space-x-1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="10"
+          ><rect width="15" height="10" fill="#ED2939"></rect><rect
+            width="10"
+            height="10"
+            fill="#fff"></rect><rect width="5" height="10" fill="#002395"
+          ></rect></svg
+        >
+        <a href="/fr" class="m-auto">
+          <span class={lang === "fr" ? "underline" : ""}> Français</span>
+        </a>
+      </li>
+      <li class="flex items-center">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          width="14"
+          height="10"
+          viewBox="0 0 7410 3900"
+          style="transform: scale(1.05); transform-origin: 0 0;"
+        >
+          <rect width="7410" height="3900" fill="#b22234"></rect>
+          <path
+            d="M0,450H7410m0,600H0m0,600H7410m0,600H0m0,600H7410m0,600H0"
+            stroke="#fff"
+            stroke-width="300"></path>
+          <rect width="2964" height="2100" fill="#3c3b6e"></rect>
+          <g fill="#fff">
+            <g id="s18">
+              <g id="s9">
+                <g id="s5">
+                  <g id="s4">
+                    <path
+                      id="s"
+                      d="M247,90 317.534230,307.082039 132.873218,172.917961H361.126782L176.465770,307.082039z"
+                    ></path>
+                    <use xlink:href="#s" y="420"></use>
+                    <use xlink:href="#s" y="840"></use>
+                    <use xlink:href="#s" y="1260"></use>
+                  </g>
+                  <use xlink:href="#s" y="1680"></use>
+                </g>
+                <use xlink:href="#s4" x="247" y="210"></use>
+              </g>
+              <use xlink:href="#s9" x="494"></use>
+            </g>
+            <use xlink:href="#s18" x="988"></use>
+            <use xlink:href="#s9" x="1976"></use>
+            <use xlink:href="#s5" x="2470"></use>
+          </g>
+        </svg>
+
+        <a href="/en" class="m-auto">
+          <span class={lang === "en" ? "underline" : ""}>English</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="mt-5">
+    <div class="text-4xl text-center pt-2 pb-6 font-bold">
+      {t("home.fullname")}
+    </div>
+    <div class="text-2xl text-justify">
+      {t("home.job")}
+    </div>
+
+    <div class="text-md mt-8 text-justify">
+      {
+        t("home.description")
+          .split("---")
+          .map((p) => <p class="mb-4">{p}</p>)
+      }
+    </div>
+  </div>
+</BaseLayout>

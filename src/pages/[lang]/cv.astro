@@ -1,0 +1,75 @@
+---
+import TimeLineElement from "../../components/cv/TimeLine.astro";
+import { languages } from "../../i18n/ui";
+import { getLangFromUrl,useTranslations } from "../../i18n/utils";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getProjectTimelines } from "../../selectors";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+export async function getStaticPaths() {
+  const routes = Object.entries(languages).map(([lang, _]) => ({
+    params: { lang },
+  }));
+
+  return [...routes];
+}
+
+const projectTimelines = await getProjectTimelines(lang);
+---
+
+<BaseLayout title="Resume">
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">{t("cv.profile")}</div>
+  </div>
+
+  <div class="mb-10 text-justify">
+    <p>
+      {t("cv.profileDesc")}
+    </p>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">{t("cv.education")}</div>
+  </div>
+
+  <div class="time-line-container grid gap-4 mb-10">
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">{t("cv.experience")}</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    {
+      projectTimelines &&
+        projectTimelines.map((projectTimeline) => (
+          <TimeLineElement {...projectTimeline} />
+        ))
+    }
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">{t("cv.certificates")}</div>
+  </div>
+
+  <ul class="list-disc mx-6 mb-10 grid gap-2">
+  </ul>
+
+  {
+    t("cv.skillsList") && (
+      <div class="mb-5">
+        <div class="text-3xl w-full font-bold">{t("cv.skills")}</div>
+
+        <ul class="list-disc md:columns-5 columns-2 mx-6">
+          {t("cv.skillsList")
+            .split(",")
+            .map((skill) => (
+              <li>{skill}</li>
+            ))}
+        </ul>
+      </div>
+    )
+  }
+</BaseLayout>

@@ -1,0 +1,43 @@
+---
+import dayjs from "dayjs";
+import localizedFormat from "dayjs/plugin/localizedFormat";
+import { ProjectSchema } from "../content/config";
+import BaseLayout from "./BaseLayout.astro";
+
+export interface Props extends ProjectSchema {}
+
+const { company, role, startDate, endDate, description, technologies } =
+  Astro.props as Props;
+dayjs.extend(localizedFormat);
+const startDisplayDate = dayjs(startDate).format("ll");
+const endDisplayDate = endDate ? dayjs(endDate).format("ll") : "";
+
+const title = `${role} at ${company}`;
+---
+
+<BaseLayout title={role} description={description}>
+  <main class="md:flex md:justify-center">
+    <article class="prose prose-lg max-w-[750px] prose-img:mx-auto">
+      <h1 class="title my-2 text-4xl font-bold">{title}</h1>
+      {
+        (
+          <time>
+            {startDisplayDate} - {endDisplayDate}
+          </time>
+        )
+      }
+      <br />
+      <div class="divider my-2"></div>
+      <slot />
+      <div class="divider my-2"></div>
+      <div class="mt-4 card-actions justify-center">
+        {
+          technologies &&
+            technologies.map((technology) => (
+              <div class="badge badge-outline">{technology}</div>
+            ))
+        }
+      </div>
+    </article>
+  </main>
+</BaseLayout>
