@@ -43,8 +43,16 @@ const projectTimelines = await projectService.getProjectTimelines()
 
   <div class="time-line-container grid gap-4 mb-10">
     <TimeLineElement
-      title="sample timeline element"
-      subtitle="sample timeline element description subtitle"
+      title={t('cv.prepa')}
+      subtitle="2017-2019: Lycée Condorcet, Paris VIIIe, France"
+    />
+    <TimeLineElement
+      title={t('cv.imt')}
+      subtitle={'2019-2021: ' + t('cv.imtDesc')}
+    />
+    <TimeLineElement
+      title={t('cv.fib')}
+      subtitle={'2021-2022 (exchange semester): ' + t('cv.fibDesc')}
     />
   </div>
 
