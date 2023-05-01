@@ -16,7 +16,8 @@ export const ui = {
     'nav.cv': 'CV',
     'nav.contact': 'Contact',
     'nav.about': 'About',
-    'home.job': 'Software Engineer, with Data Science and General Engineering background',
+    'home.job':
+      'Software Engineer, with Data Science and General Engineering background',
     'home.fullname': 'Clark ANDRIANASOLO',
     'home.description': `
       I graduated from IMT Mines Alès, a leading engineering school in France, one year ago. 
@@ -34,7 +35,7 @@ export const ui = {
       I still love the analysis branch of mathematics, that is why I chose to specialize in data science and artificial intelligence, 
       and I am still open to opportunities in this field.
       ---
-      As you may have deducted, I am passionate about learning theory and applying it to real life problems.
+      As you may have read, I am passionate about learning theory and applying it to real life problems.
       Currently, I have absorbed a lot of knowledge in the field of software through books, blog posts and production code of course. That includes design patterns, domain-driven design, code quality, databases paradigms and optimization, 
       and coding best practices. I am also very interested in the field of data science, and I am currently deepening my knowledges of deep learning models, 
       with the rising popularity of large language models and transformers, by reading research papers and trying to build and run various models.
@@ -65,7 +66,8 @@ export const ui = {
       Hard-working, and always eager to learn new things and broaden my knowledge on given subjects.
     `,
     'cv.education': 'Education',
-    'cv.prepa': 'Preparatory classes, Physics and engineering specialization (PSI*)',
+    'cv.prepa':
+      'Preparatory classes, Physics and engineering specialization (PSI*)',
     'cv.imt': 'General Engineering, Data Science and Artificial Intelligence',
     'cv.imtDesc': 'IMT Mines Alès, engineering school, France',
     'cv.fib': 'Applied statistics, Machine Learning and Deep Learning',
@@ -83,7 +85,8 @@ export const ui = {
     'nav.home': 'Acceuil',
     'nav.projects': 'Projets',
     'nav.about': 'À propos',
-    'home.job': 'Ingénieur logiciel, Data scientist et Ingénieur généraliste de formation',
+    'home.job':
+      'Ingénieur logiciel, Data scientist et Ingénieur généraliste de formation',
     'home.description': `
       J'ai obtenu mon diplôme de l'IMT Mines Alès, une grande école d'ingénieurs réputée en France, il y a un an. 
       J'ai bénéficié d'une solide formation théorique et pratique en génie logiciel, en science des données et en ingéniérie.
@@ -97,7 +100,7 @@ export const ui = {
       À l'essence, j'aime les mathématiques et c'est pourquoi j'ai voulu approfondir mes connaissances en algèbre en me lançant dans le génie logiciel.
       J'aime toujours la branche d'analyse des mathématiques, c'est pourquoi j'ai choisi de me spécialiser en science des données et en intelligence artificielle, et je suis toujours ouvert aux opportunités dans ce domaine.
       ---
-      Comme vous avez pu le déduire, je suis passionné par l'apprentissage de la théorie et son application aux problèmes de la vie réelle. 
+      Comme vous avez pu le constater, je suis passionné par l'apprentissage de la théorie et son application aux problèmes de la vie réelle. 
       ---
       Actuellement, j'ai acquis beaucoup de connaissances dans le domaine du logiciel grâce à la lecture de livres, de publications de blog et bien sûr de code mis en production.
       Cela inclut les sujets tels que : les patrons de conception, le 'domain-driven design', la qualité du code, les paradigmes de bases de données et l'optimisation, ainsi que les meilleures pratiques de programmation.
@@ -127,10 +130,13 @@ export const ui = {
       Travailleur acharné, toujours désireux d'apprendre de nouvelles choses et d'élargir mes connaissances sur les sujets.
     `,
     'cv.education': 'Cursus scolaire',
-    'cv.prepa': 'Classes préparatoires, Spécialisation physique et sciences de l\'ingénieur (PSI*)',
-    'cv.imt': 'Ingénieur généraliste, Informatique et Intelligence Artificielle',
-    'cv.imtDesc': 'IMT Mines Alès, école d\'ingénieur, France',
-    'cv.fib': 'Statistiques appliquées, Apprentissage machine et réseaux de neurones profonds',
+    'cv.prepa':
+      "Classes préparatoires, Spécialisation physique et sciences de l'ingénieur (PSI*)",
+    'cv.imt':
+      'Ingénieur généraliste, Informatique et Intelligence Artificielle',
+    'cv.imtDesc': "IMT Mines Alès, école d'ingénieur, France",
+    'cv.fib':
+      'Statistiques appliquées, Apprentissage machine et réseaux de neurones profonds',
     'cv.fibDesc': 'FIB, Université de Barcelone, Espagne',
     'cv.experience': 'Expérience',
     'cv.skills': 'Compétences',
