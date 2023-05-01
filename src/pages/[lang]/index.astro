@@ -1,18 +1,18 @@
 ---
-import { languages } from "../../i18n/ui";
-import { getLangFromUrl,useTranslations } from "../../i18n/utils";
-import BaseLayout from "../../layouts/BaseLayout.astro";
+import { languages } from '../../i18n/ui'
+import { getLangFromUrl, useTranslations } from '../../i18n/utils'
+import BaseLayout from '../../layouts/BaseLayout.astro'
 
 export async function getStaticPaths() {
   const routes = Object.entries(languages).map(([lang, _]) => ({
     params: { lang },
-  }));
+  }))
 
-  return [...routes];
+  return [...routes]
 }
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 ---
 
 <BaseLayout>
@@ -30,7 +30,7 @@ const t = useTranslations(lang);
           ></rect></svg
         >
         <a href="/fr" class="m-auto">
-          <span class={lang === "fr" ? "underline" : ""}> Français</span>
+          <span class={lang === 'fr' ? 'underline' : ''}> Français</span>
         </a>
       </li>
       <li class="flex items-center">
@@ -74,7 +74,7 @@ const t = useTranslations(lang);
         </svg>
 
         <a href="/en" class="m-auto">
-          <span class={lang === "en" ? "underline" : ""}>English</span>
+          <span class={lang === 'en' ? 'underline' : ''}>English</span>
         </a>
       </li>
     </ul>
@@ -82,16 +82,16 @@ const t = useTranslations(lang);
 
   <div class="mt-5">
     <div class="text-4xl text-center pt-2 pb-6 font-bold">
-      {t("home.fullname")}
+      {t('home.fullname')}
     </div>
     <div class="text-2xl text-justify">
-      {t("home.job")}
+      {t('home.job')}
     </div>
 
     <div class="text-md mt-8 text-justify">
       {
-        t("home.description")
-          .split("---")
+        t('home.description')
+          .split('---')
           .map((p) => <p class="mb-4">{p}</p>)
       }
     </div>

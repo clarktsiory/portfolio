@@ -1,2 +1,2 @@
-export * from './projects';
-
+export { selectorsModule } from './module'
+export { ProjectService } from './projects'

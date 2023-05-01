@@ -1,18 +1,18 @@
 ---
-import dayjs from "dayjs";
-import localizedFormat from "dayjs/plugin/localizedFormat";
-import { ProjectSchema } from "../content/config";
-import BaseLayout from "./BaseLayout.astro";
+import dayjs from 'dayjs'
+import localizedFormat from 'dayjs/plugin/localizedFormat'
+import { ProjectSchema } from '../content/config'
+import BaseLayout from './BaseLayout.astro'
 
 export interface Props extends ProjectSchema {}
 
 const { company, role, startDate, endDate, description, technologies } =
-  Astro.props as Props;
-dayjs.extend(localizedFormat);
-const startDisplayDate = dayjs(startDate).format("ll");
-const endDisplayDate = endDate ? dayjs(endDate).format("ll") : "";
+  Astro.props as Props
+dayjs.extend(localizedFormat)
+const startDisplayDate = dayjs(startDate).format('ll')
+const endDisplayDate = endDate ? dayjs(endDate).format('ll') : ''
 
-const title = `${role} at ${company}`;
+const title = `${role} at ${company}`
 ---
 
 <BaseLayout title={role} description={description}>
