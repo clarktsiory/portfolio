@@ -1,8 +1,8 @@
 ---
-import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import { getLangFromUrl, useTranslations } from '../i18n/utils'
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 ---
 
 <div class="drawer-side bg-base-200">
@@ -27,13 +27,13 @@ const t = useTranslations(lang);
     </div>
     <ul class="grow shrink">
       <!-- Sidebar content here -->
-      <li><a id="home" href={`/${lang}/`}>{t("nav.home")}</a></li>
+      <li><a id="home" href={`/${lang}/`}>{t('nav.home')}</a></li>
       <li>
-        <a id="projects" href={`/${lang}/projects/`}>{t("nav.projects")}</a>
+        <a id="projects" href={`/${lang}/projects/`}>{t('nav.projects')}</a>
       </li>
-      <li><a id="cv" href={`/${lang}/cv/`}>{t("nav.cv")}</a></li>
+      <li><a id="cv" href={`/${lang}/cv/`}>{t('nav.cv')}</a></li>
       <li>
-        <a href="mailto:clarkandrianasolo@gmail.com">{t("nav.contact")}</a>
+        <a href="mailto:clarkandrianasolo@gmail.com">{t('nav.contact')}</a>
       </li>
     </ul>
     <div class="social-icons px-4 my-2 flex self-center">
@@ -61,25 +61,25 @@ const t = useTranslations(lang);
   </div>
 </div>
 <script>
-  const homeLink = document.getElementById("home");
-  const projectsLink = document.getElementById("projects");
-  const cvLink = document.getElementById("cv");
+  const homeLink = document.getElementById('home')
+  const projectsLink = document.getElementById('projects')
+  const cvLink = document.getElementById('cv')
 
-  var isHome = true;
+  var isHome = true
 
-  const url = window.location.href;
+  const url = window.location.href
 
-  const pages = [projectsLink, cvLink];
+  const pages = [projectsLink, cvLink]
 
-  const activeClass = "bg-base-300"; // For primary color replace with `active` class
+  const activeClass = 'bg-base-300' // For primary color replace with `active` class
 
   pages.forEach((elem) => {
     if (url.includes(elem.id)) {
-      isHome = false;
-      elem.classList.add(activeClass);
+      isHome = false
+      elem.classList.add(activeClass)
     }
-  });
+  })
   if (isHome) {
-    homeLink.classList.add(activeClass);
+    homeLink.classList.add(activeClass)
   }
 </script>

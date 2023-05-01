@@ -7,15 +7,32 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
+    "prettier": "prettier src --check",
+    "prettier:fix": "prettier src test --check --write"
   },
   "dependencies": {
     "@astrojs/mdx": "^0.19.0",
     "@astrojs/tailwind": "^3.1.1",
     "@tailwindcss/typography": "^0.5.9",
     "astro": "^2.3.0",
+    "brandi-typed": "^1.0.6",
     "daisyui": "^2.51.5",
     "dayjs": "^1.11.7",
+    "fp-ts": "^2.14.0",
+    "pluralize": "^8.0.0",
     "tailwindcss": "^3.3.1"
+  },
+  "devDependencies": {
+    "@types/pluralize": "^0.0.29",
+    "@typescript-eslint/eslint-plugin": "^5.59.1",
+    "@typescript-eslint/parser": "^5.59.1",
+    "eslint": "^8.39.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.8",
+    "typescript": "^4.9.5"
   }
 }

@@ -1,44 +1,55 @@
 ---
-import TimeLineElement from "../../components/cv/TimeLine.astro";
-import { languages } from "../../i18n/ui";
-import { getLangFromUrl,useTranslations } from "../../i18n/utils";
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import { getProjectTimelines } from "../../selectors";
+import { createContainer } from 'brandi'
+import { bootstrap } from '../../bootstrap'
+import TimeLineElement from '../../components/cv/TimeLine.astro'
+import { languages } from '../../i18n/ui'
+import { useTranslations } from '../../i18n/utils'
+import BaseLayout from '../../layouts/BaseLayout.astro'
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+const container = createContainer()
+const di = bootstrap(Astro)
+container.use(...di.allTokens).from(di)
+
+const lang = container.get(di.tokens.lang)
+
+const t = useTranslations(lang)
+const projectService = container.get(di.tokens.projectService)
 
 export async function getStaticPaths() {
   const routes = Object.entries(languages).map(([lang, _]) => ({
     params: { lang },
-  }));
+  }))
 
-  return [...routes];
+  return [...routes]
 }
 
-const projectTimelines = await getProjectTimelines(lang);
+const projectTimelines = await projectService.getProjectTimelines()
 ---
 
 <BaseLayout title="Resume">
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">{t("cv.profile")}</div>
+    <div class="text-3xl w-full font-bold">{t('cv.profile')}</div>
   </div>
 
   <div class="mb-10 text-justify">
     <p>
-      {t("cv.profileDesc")}
+      {t('cv.profileDesc')}
     </p>
   </div>
 
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">{t("cv.education")}</div>
+    <div class="text-3xl w-full font-bold">{t('cv.education')}</div>
   </div>
 
   <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement
+      title="sample timeline element"
+      subtitle="sample timeline element description subtitle"
+    />
   </div>
 
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">{t("cv.experience")}</div>
+    <div class="text-3xl w-full font-bold">{t('cv.experience')}</div>
   </div>
 
   <div class="time-line-container mb-10">
@@ -51,20 +62,22 @@ const projectTimelines = await getProjectTimelines(lang);
   </div>
 
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">{t("cv.certificates")}</div>
+    <div class="text-3xl w-full font-bold">{t('cv.certificates')}</div>
   </div>
 
   <ul class="list-disc mx-6 mb-10 grid gap-2">
+    <li>TOEIC 925/990 (2019)</li>
+    <li>Explore ML certificate (intermediate level), Google AI (2020)</li>
   </ul>
 
   {
-    t("cv.skillsList") && (
+    t('cv.skillsList') && (
       <div class="mb-5">
-        <div class="text-3xl w-full font-bold">{t("cv.skills")}</div>
+        <div class="text-3xl w-full font-bold">{t('cv.skills')}</div>
 
         <ul class="list-disc md:columns-5 columns-2 mx-6">
-          {t("cv.skillsList")
-            .split(",")
+          {t('cv.skillsList')
+            .split(',')
             .map((skill) => (
               <li>{skill}</li>
             ))}

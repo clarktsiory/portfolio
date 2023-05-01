@@ -1,27 +1,27 @@
 ---
-import { getCollection } from "astro:content";
-import { ProjectSchema } from "../../../content/config";
-import ProjectLayout from "../../../layouts/ProjectLayout.astro";
+import { getCollection } from 'astro:content'
+import { ProjectSchema } from '../../../content/config'
+import ProjectLayout from '../../../layouts/ProjectLayout.astro'
 
 export async function getStaticPaths() {
-  const pages = await getCollection("project");
+  const pages = await getCollection('project')
 
   const paths = pages.map((page) => {
-    const [lang, ...slug] = page.slug.split("/");
-    return { params: { lang, slug: slug.join("/") || undefined }, props: page };
-  });
+    const [lang, ...slug] = page.slug.split('/')
+    return { params: { lang, slug: slug.join('/') || undefined }, props: page }
+  })
 
-  return paths;
+  return paths
 }
 
 interface Props {
-  data: ProjectSchema;
+  data: ProjectSchema
 }
 
-const page = Astro.props;
-const post = page.data;
+const page = Astro.props
+const post = page.data
 
-const { Content } = await page.render();
+const { Content } = await page.render()
 ---
 
 <ProjectLayout

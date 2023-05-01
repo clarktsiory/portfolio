@@ -1,12 +1,16 @@
 export const languages = {
   en: 'English',
   fr: 'Français',
-};
+} as const
 
-export const defaultLang = 'en';
+export const defaultLang = 'en'
 
 export const ui = {
   en: {
+    'time.days': 'days',
+    'time.weeks': 'weeks',
+    'time.months': 'months',
+    'time.years': 'years',
     'nav.home': 'Home',
     'nav.projects': 'Projects',
     'nav.cv': 'CV',
@@ -23,9 +27,13 @@ export const ui = {
     'cv.experience': 'Experience',
     'cv.certificates': 'Certifications',
     'cv.skills': 'Skills',
-    'cv.skillsList': ''
+    'cv.skillsList': '',
   },
   fr: {
+    'time.days': 'jours',
+    'time.weeks': 'semaines',
+    'time.months': 'mois',
+    'time.years': 'ans',
     'nav.home': 'Acceuil',
     'nav.projects': 'Projets',
     'nav.about': 'À propos',
@@ -38,6 +46,6 @@ export const ui = {
     'cv.education': 'Cursus scolaire',
     'cv.experience': 'Expérience',
     'cv.skills': 'Compétences',
-    'cv.skillsList': ''
+    'cv.skillsList': '',
   },
-} as const;
+} as const
