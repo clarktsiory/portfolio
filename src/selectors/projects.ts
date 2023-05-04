@@ -147,7 +147,7 @@ export class ProjectService {
       ) => {
         const aRange = new Range(startDateA, endDateA)
         const bRange = new Range(startDateB, endDateB)
-        return aRange > bRange ? 1 : -1
+        return aRange < bRange ? 1 : -1
       }
     )
   }
