@@ -25,11 +25,11 @@ export const ui = {
       data science and general engineering. I am currently working as a software engineer and
       I am open to new opportunities.
       ---
-      I adopted object-oriented programming as my main paradigm at first, but I quickly discovered functional programming,
-      and fell in love with it. I am now a strong advocate of functional programming, my favorite language being Scala 
-      which combines the best of both worlds. As I learned Python for data science and I used it for my software projects
-      for REST APIs, I discovered the functional idiom in Python that I find beautiful and that made me realize the way to write idiomatic Python code
-      also for data processing purposes.
+      I adopted object-oriented programming as my main paradigm at first, then I discovered functional programming,
+      and fell in love with it. My favorite language is Scala which combines the best of both worlds, but I also had an opportunity to code in other languages using both paradigms. 
+      For example, I learned Python for data science and I also used it for my software projects
+      for REST APIs. I discovered the functional idiom in Python that I find beautiful and that made me realize the way to write idiomatic functional Python code also for data processing purposes.
+      The same goes for Typescript, where I could compare functional programming and object-oriented programming.
       ---
       In the essence, I love mathematics and that is why I wanted to deepen my knowledge in algebra by getting into software engineering.
       I still love the analysis branch of mathematics, that is why I chose to specialize in data science and artificial intelligence, 
@@ -45,10 +45,10 @@ export const ui = {
       ---
       I am also open to any other opportunities, please take into account that I graduated as a general engineer, 
       that a significant part of my academic background consists of mathematics, physics, applied sciences and engineering, 
-      and that all that was mentioned above is only about my specialization in data science and software engineering.
+      and despite my specialization in data science and software engineering, I could be fit to work in various roles and fields.
       ---
       All that being said, please head over to my projects page to see what I have been working on lately,
-      and do not hesitate to contact me if you have any questions or if you want to work with me.
+      and do not hesitate to contact me.
       ---
       Cheers!
       ---
@@ -92,10 +92,11 @@ export const ui = {
       J'ai bénéficié d'une solide formation théorique et pratique en génie logiciel, en science des données et en ingéniérie.
       Actuellement, je travaille en tant qu'ingénieur logiciel et je suis ouvert à de nouvelles opportunités.
       ---
-      J'ai d'abord adopté la programmation orientée objet comme mon principal paradigme, mais j'ai rapidement découvert la programmation fonctionnelle et j'en suis tombé amoureux. 
-      Je suis maintenant un fervent partisan de la programmation fonctionnelle, mon langage préféré étant Scala qui combine le meilleur des deux mondes.
-      Comme j'ai appris Python pour la science des données et que je l'ai utilisé pour mes projets logiciels pour les API REST, 
-      j'ai découvert l'écriture fonctionnelle en Python que je trouve belle et qui m'a fait réaliser la façon d'écrire du code Python idiomatique également à des fins de traitement de données.
+      J'ai d'abord adopté la programmation orientée objet comme mon principal paradigme, et j'ai ensuite rapidement découvert la programmation fonctionnelle et j'en suis tombé amoureux. 
+      Mon langage préféré est Scala qui combine le meilleur des deux mondes, mais j'ai aussi pu avoir des visions différentes des autres languages en essayant à la fois l'écriture en fonctionnel et en orienté objet. Par exemple,
+      j'ai appris Python pour la science des données et je l'ai utilisé pour mes projets logiciels pour les API REST, 
+      et j'ai ensuite découvert une façon d'écrire du code Python idiomatique à des fins de traitement de données en utilisant les idiomes fonctionnels.
+      Il en était de même pour Typescript, où j'ai pu comparer la programmation fonctionnelle et la programmation orientée objet.
       ---
       À l'essence, j'aime les mathématiques et c'est pourquoi j'ai voulu approfondir mes connaissances en algèbre en me lançant dans le génie logiciel.
       J'aime toujours la branche d'analyse des mathématiques, c'est pourquoi j'ai choisi de me spécialiser en science des données et en intelligence artificielle, et je suis toujours ouvert aux opportunités dans ce domaine.
@@ -109,10 +110,11 @@ export const ui = {
       en lisant des articles de recherche et en essayant de construire et d'exécuter divers modèles.
       ---
       ---
-      Avec tout ce bagage, je recherche un emploi en tant qu'ingénieur logiciel ou scientifique des données (ou les deux). Je suis également ouvert à toute autre opportunité, veuillez prendre en compte que j'ai obtenu mon diplôme en tant qu'ingénieur généraliste, que l'une des parties importantes de mon parcours académique se compose de mathématiques, de physique, de sciences appliquées et de génie, et que tout ce qui a été mentionné ci-dessus ne concerne que ma spécialisation en science des données et en génie logiciel.
+      Je recherche un emploi en tant qu'ingénieur logiciel ou scientifique des données (ou les deux). Je suis également ouvert à toute autre opportunité, 
+      veuillez prendre en compte que j'ai obtenu mon diplôme en tant qu'ingénieur généraliste, que l'une des parties importantes de mon parcours académique se compose de mathématiques, de physique, de sciences appliquées et de génie,
+       et que bien que je sois spécialisé en science des données et en génie logiciel, je pourrais être apte à travailler dans des rôles et domaines variés.
       ---
-      Cela étant dit, veuillez vous rendre sur ma page de projets pour voir sur quoi j'ai travaillé récemment,
-      et n'hésitez pas à me contacter si vous avez des questions ou si vous souhaitez collaborer.
+      Cela étant dit, vous pouvez vous rendre sur ma page de projets pour voir sur quoi j'ai travaillé récemment, n'hésitez pas à me contacter.
       ---
       Cordialement,
       ---
